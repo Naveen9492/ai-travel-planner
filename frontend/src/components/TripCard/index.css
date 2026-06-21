@@ -1,0 +1,15 @@
+.trip-card {
+  list-style-type: none;
+
+  border: 1px solid #d7d7d7;
+  border-radius: 10px;
+
+  padding: 20px;
+}
+
+.trip-btn-container {
+  margin-top: 15px;
+
+  display: flex;
+  gap: 10px;
+}

@@ -1,0 +1,33 @@
+.trip-details {
+  padding: 30px;
+}
+
+.budget-card,
+.hotel-card,
+.day-card {
+  margin-top: 20px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 10px;
+
+  padding: 20px;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day-card ul {
+  padding-left: 20px;
+}
+
+.day-card li {
+  margin-bottom: 10px;
+}
+
+.remove-btn {
+  margin-left: 10px;
+}

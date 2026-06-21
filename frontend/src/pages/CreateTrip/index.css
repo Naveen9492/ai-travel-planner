@@ -1,0 +1,40 @@
+.create-trip-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.trip-form {
+  width: 600px;
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.trip-form input,
+.trip-form select {
+  padding: 10px;
+}
+
+.trip-form button {
+  padding: 12px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.interest-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 10px;
+}

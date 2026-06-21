@@ -1,0 +1,26 @@
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+}
+
+.auth-form {
+  width: 350px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form input {
+  padding: 10px;
+}
+
+.auth-form button {
+  padding: 10px;
+  cursor: pointer;
+}
