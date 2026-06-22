@@ -15,22 +15,17 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h1>AI Travel Planner</h1>
-
+      <Link to="/dashboard" className="logo-link">
+        <h1 className="logo">AI Travel Planner</h1>
+      </Link>
       <div className="nav-links">
-        <Link to="/dashboard">
+        <Link to="/dashboard" className="nav-link">
           Dashboard
         </Link>
-
-        <Link to="/create-trip">
+        <Link to="/create-trip" className="nav-link">
           Create Trip
         </Link>
-
-        <button
-          type="button"
-          onClick={onLogout}
-          className="logout-btn"
-        >
+        <button type="button" onClick={onLogout} className="logout-btn">
           Logout
         </button>
       </div>

@@ -1,15 +1,105 @@
-.trip-card {
-  list-style-type: none;
-
-  border: 1px solid #d7d7d7;
-  border-radius: 10px;
-
-  padding: 20px;
+* {
+  box-sizing: border-box;
 }
 
-.trip-btn-container {
-  margin-top: 15px;
+.trip-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 15px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
 
+.trip-card:hover {
+  transform: translateY(-5px);
+}
+
+.distination-text {
+  font-size: 22px;
+  color: #1e0b4b;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.days-text {
+  font-size: 15px;
+  color: #3c3939;
+  margin-bottom: 5px;
+}
+
+.budget-type-text {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Buttons container */
+.trip-btn-container {
   display: flex;
   gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Buttons */
+.view-trip-button,
+.delete-trip-button {
+  flex: 1;
+  height: 38px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* View button */
+.view-trip-button {
+  background-color: #1e0b4b;
+  color: #ffffff;
+}
+
+.view-trip-button:hover {
+  background-color: #32146e;
+}
+
+/* Delete button */
+.delete-trip-button {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.delete-trip-button:hover {
+  background-color: #dc2626;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .trip-card {
+    max-width: 350px;
+    padding: 22px;
+  }
+
+  .distination-text {
+    font-size: 24px;
+  }
+
+  .view-trip-button,
+  .delete-trip-button {
+    height: 42px;
+    font-size: 15px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .trip-card {
+    max-width: 380px;
+  }
 }

@@ -1,33 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
 .navbar {
-  height: 70px;
-  padding: 0 30px;
-
+  height: 10vh;
+  width: 100%;
+  background-color: #1e0b4b;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-
-  background-color: #2563eb;
+  padding: 0 20px;
 }
 
-.navbar h1 {
-  color: white;
+/* Logo */
+.logo {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0;
 }
 
-.nav-links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.nav-links a {
-  color: white;
+.logo-link {
   text-decoration: none;
 }
 
+/* Nav links container */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Links */
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #a855f7;
+}
+
+/* Logout button */
 .logout-btn {
+  background-color: #a855f7;
+  color: #ffffff;
   border: none;
-  background: white;
-  padding: 8px 15px;
-  border-radius: 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #7c3aed;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .navbar {
+    padding: 0 40px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+
+  .logout-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .navbar {
+    padding: 0 60px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
 }

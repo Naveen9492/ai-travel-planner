@@ -1,40 +1,159 @@
-.create-trip-container {
-  display: flex;
-  justify-content: center;
-  padding: 40px;
+* {
+  box-sizing: border-box;
 }
 
+.create-trip-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(100deg, #1e0b4b, #a855f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FORM */
 .trip-form {
-  width: 600px;
-
-  background: white;
-
-  padding: 30px;
-
-  border-radius: 10px;
-
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-
-  gap: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.trip-form input,
-.trip-form select {
-  padding: 10px;
+/* HEADING */
+.create-trip-heading {
+  font-size: 26px;
+  text-align: center;
+  color: #1e0b4b;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.trip-form button {
-  padding: 12px;
-  margin-top: 15px;
-  cursor: pointer;
+/* LABEL */
+.create-trip-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1e0b4b;
+  margin-bottom: 6px;
 }
 
+/* INPUTS */
+.create-input-filed {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #1e0b4b;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
+  color: #333;
+}
+
+/* FOCUS EFFECT */
+.create-input-filed:focus {
+  border: 2px solid #a855f7;
+}
+
+/* INTEREST GRID */
 .interest-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  margin-bottom: 20px;
+}
+
+.interest-grid label {
+  font-size: 13px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* BUTTON */
+.generate-trip-button {
+  width: 100%;
+  height: 42px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e0b4b;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.generate-trip-button:hover {
+  background-color: #32146e;
+}
+
+.generate-trip-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ERROR MESSAGE */
+.error-message {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #ef4444;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .trip-form {
+    max-width: 500px;
+    padding: 32px;
+  }
+
+  .create-trip-heading {
+    font-size: 32px;
+  }
+
+  .create-input-filed {
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .generate-trip-button {
+    height: 48px;
+    font-size: 16px;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {
+  .trip-form {
+    max-width: 550px;
+    padding: 40px;
+  }
+
+  .create-trip-heading {
+    font-size: 36px;
+  }
+
+  .interest-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1440px) {
+  .trip-form {
+    max-width: 600px;
+  }
+
+  .create-trip-heading {
+    font-size: 40px;
+  }
 }
