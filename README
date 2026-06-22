@@ -1,0 +1,291 @@
+# AI Travel Planner
+
+## Project Overview
+
+AI Travel Planner is a full-stack MERN application that helps users generate AI-powered travel itineraries.
+
+Users can enter:
+
+- Destination
+- Number of Days
+- Budget Preference
+- Interests
+
+The system generates:
+
+- Day-wise itinerary
+- Budget estimation
+- Hotel recommendations
+
+The application supports multiple users with secure authentication and strict data isolation.
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- React JS
+- React Router DOM
+- Axios
+- CSS
+
+### Backend
+
+- Node JS
+- Express JS
+- MongoDB Atlas
+- Mongoose
+
+### Authentication
+
+- JWT
+- bcryptjs
+
+### AI Integration
+
+- Google Gemini API
+
+---
+
+## Features
+
+### Authentication
+
+- Register
+- Login
+- JWT Authentication
+- Protected Routes
+
+### Dashboard
+
+- View Trips
+- Delete Trips
+- Create New Trips
+
+### AI Travel Planner
+
+Generate:
+
+- Day-wise itinerary
+- Budget estimation
+- Hotel recommendations
+
+### Authorization
+
+Each user can only:
+
+- View their own trips
+- Create their own trips
+- Delete their own trips
+
+Users cannot access data belonging to other users.
+
+---
+
+## Creative Feature
+
+### Smart Budget Estimation
+
+The AI generates an estimated trip cost including:
+
+- Flights
+- Accommodation
+- Food
+- Activities
+
+This helps travelers understand the expected cost before booking.
+
+### Hotel Recommendations
+
+The AI also recommends hotels based on:
+
+- Destination
+- Budget preference
+
+This provides a more complete travel planning experience.
+
+---
+
+## Project Structure
+
+### Frontend
+
+```text
+src
+│
+├── api
+├── components
+│   ├── Navbar
+│   └── TripCard
+│
+├── pages
+│   ├── Login
+│   ├── Register
+│   ├── Dashboard
+│   ├── CreateTrip
+│   ├── TripDetails
+│   └── NotFound
+│
+├── App.js
+└── index.js
+```
+
+### Backend
+
+```text
+backend
+│
+├── db
+│   └── connectDB.js
+│
+├── middleware
+│   └── auth.js
+│
+├── server.js
+│
+├── .env
+└── package.json
+```
+
+---
+
+## Authentication Flow
+
+1. User registers
+2. Password is hashed using bcrypt
+3. User logs in
+4. JWT token is generated
+5. Token stored in cookies
+6. Protected routes validate JWT token
+
+---
+
+## API Endpoints
+
+### Authentication
+
+#### Register
+
+```http
+POST /api/auth/register
+```
+
+#### Login
+
+```http
+POST /api/auth/login
+```
+
+### Profile
+
+```http
+GET /api/profile
+```
+
+### Trips
+
+#### Generate Trip
+
+```http
+POST /api/trips/generate
+```
+
+#### Get All Trips
+
+```http
+GET /api/trips
+```
+
+#### Get Single Trip
+
+```http
+GET /api/trips/:id
+```
+
+#### Delete Trip
+
+```http
+DELETE /api/trips/:id
+```
+
+---
+
+## Environment Variables
+
+Backend .env
+
+```env
+PORT=5000
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_secret
+
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+---
+
+## Installation
+
+### Backend
+
+```bash
+cd backend
+
+npm install
+
+npm run dev
+```
+
+### Frontend
+
+```bash
+cd frontend
+
+npm install
+
+npm start
+```
+
+---
+
+## Deployment
+
+### Frontend
+
+Deployed on Vercel
+
+Frontend URL:
+
+https://your-frontend-url.vercel.app
+
+### Backend
+
+Deployed on Render
+
+Backend URL:
+
+https://your-backend-url.onrender.com
+
+---
+
+## Future Improvements
+
+- Add Trip Sharing
+- Export PDF Itinerary
+- Add Maps Integration
+- Add Weather Forecast
+- Add AI Chat Assistant
+- Add Trip Collaboration
+
+---
+
+## Author
+
+Naveen
+
+Full Stack Developer
+
+MERN Stack Developer
